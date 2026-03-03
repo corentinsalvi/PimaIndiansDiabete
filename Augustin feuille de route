@@ -1,0 +1,103 @@
+1️⃣ Baseline simple
+
+Toujours commencer par :
+
+Logistic Regression
+from sklearn.linear_model import LogisticRegression
+
+Pourquoi ?
+
+Parce que :
+
+Interprétable
+
+Stable
+
+Référence médicale standard
+
+2️⃣ Random Forest / XGBoost
+
+Ensuite :
+
+from sklearn.ensemble import RandomForestClassifier
+
+Souvent beaucoup plus performant.
+
+3️⃣ Réseau de neurones (Deep Learning)
+
+Seulement après.
+
+Tu as 700k lignes → là ça commence à être intéressant.
+
+Exemple :
+
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+model = Sequential()
+model.add(Dense(64, activation='relu', input_shape=(X.shape[1],)))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+🏗️ Plan de projet structuré (comme un vrai projet pro)
+Phase 1 — EDA
+
+Distribution des variables
+
+Corrélations
+
+Boxplots diabétiques vs non
+
+Détection outliers
+
+Phase 2 — Préprocessing
+
+One-hot encoding pour :
+
+gender
+
+ethnicity
+
+smoking_status
+
+etc
+
+df = pd.get_dummies(df, drop_first=True)
+
+Standardisation
+
+Train / validation split
+
+Phase 3 — Modèles
+
+Logistic Regression
+
+Random Forest
+
+XGBoost
+
+Neural Network
+
+Comparer :
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+ROC-AUC
+
+Phase 4 — Feature importance
+
+Très important pour la crédibilité médicale :
+
+model.feature_importances_
+
+Tu dois être capable de dire :
+
+“Le BMI, l’hypertension et les triglycérides sont les variables les plus prédictives.”
+
+Sinon ton modèle est suspect.
+

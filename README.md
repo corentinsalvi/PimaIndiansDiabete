@@ -1,7 +1,5 @@
 # Diabete Prediction
 
-# Diabetes Prediction — Neural Network Classifier
-
 ## Description
 Le projet consiste à développer une pipeline de ML complète pour prédire si un patient est diabétique ou non.
 Les données cliniques et comportementales sont nettoyées, normalisées puis passées dans un réseau de neurones (MLP) qui prédit la probabilité de diabète pour chaque patient.
